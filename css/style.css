@@ -19,6 +19,7 @@ button {
 }
 
 #change-btn {
+  background-color: #fff;
   color: #000;
   width: 100%;
   outline: none;
