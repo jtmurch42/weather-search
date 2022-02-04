@@ -13,6 +13,12 @@ button {
   border-radius: 0.25rem;
 }
 
+#loading {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 #weather-heading {
   color: #fff;
   margin-bottom: 1.25rem;

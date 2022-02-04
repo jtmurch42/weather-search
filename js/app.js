@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await submitSearch(city, countryCode);
   }
 
+  document.querySelector('#loading').classList.add('d-none');
   document.querySelector('#main-container').classList.remove('d-none');
 });
 
