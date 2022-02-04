@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Weather Search</title>
+  </head>
+  <body>
+    <div id="main-container" class="container d-none">
+      <div id="weather-container" class="col-md-6 mx-auto mt-3 mb-2 p-5">
+        <h1 id="weather-heading" class="text-center">Weather Search</h1>
+        <h2 id="temperature" class="text-center"></h2>
+        <div id="img"></div>
+        <p id="min-max" class="text-center"></p>
+        <ul id="details" class="list-group">
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="font-weight-bold">Humidity</span>
+            <span id="humidity">N/A</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="font-weight-bold">Feels Like</span>
+            <span id="feels-like">N/A</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="font-weight-bold">Wind</span>
+            <span id="wind">N/A</span>
+          </li>
+        </ul>
+        <button id="change-btn" class="mt-2" data-toggle="modal" data-target="#search-modal">Search Location</button>
+      </div>
+    </div>
+
+    <div class="modal" id="search-modal" tabindex="-1" aria-labelledby="search-modal-label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="search-modal-label">Search Location</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="form-error"></div>
+            <form id="search-form" autocomplete="off">
+              <input type="text" id="city" placeholder="City" class="form-control mb-2" />
+              <input type="text" id="country" placeholder="Country" class="form-control" />
+              <div id="autocomplete-container"></div>
+              <button id="form-btn" class="mt-2">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/countries.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
