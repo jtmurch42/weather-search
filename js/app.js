@@ -73,9 +73,8 @@ function addErrorMsg(errorMsg) {
 }
 
 async function submitSearch(city, countryCode) {
-  const btn = document.querySelector('#form-btn');
-  btn.disabled = true;
-  btn.innerText = 'Searching...';
+  searchFormBtn.disabled = true;
+  searchFormBtn.innerText = 'Searching...';
 
   try {
     const result = await fetch(
@@ -126,8 +125,8 @@ async function submitSearch(city, countryCode) {
   } catch (error) {
     addErrorMsg(error.message);
   } finally {
-    btn.disabled = false;
-    btn.innerText = 'Search';
+    searchFormBtn.disabled = false;
+    searchFormBtn.innerText = 'Search';
   }
 }
 
